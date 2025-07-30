@@ -1,0 +1,1960 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20251.25.0520.1026                               -->
+<workbook original-version='18.1' source-build='2025.1.2 (20251.25.0520.1026)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <CascadingFilters />
+    <CascadingFiltersHamburgerUI />
+    <MapboxVectorStylesAndLayers />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='states' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;CA&quot;'>
+        <calculation class='tableau' formula='&quot;CA&quot;' />
+        <members>
+          <member value='&quot;AZ&quot;' />
+          <member value='&quot;CA&quot;' />
+          <member value='&quot;IL&quot;' />
+          <member value='&quot;NY&quot;' />
+          <member value='&quot;PA&quot;' />
+          <member value='&quot;TX&quot;' />
+        </members>
+      </column>
+    </datasource>
+    <datasource caption='crime_safety_dataset.cleaned' inline='true' name='federated.1d6dorr0jyvyda19ruwe50y01n8d' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='crime_safety_dataset.cleaned' name='textscan.0o9h8rf0vo1wgi180twld02ms2cy'>
+            <connection class='textscan' directory='C:/Users/My/Downloads' filename='crime_safety_dataset.cleaned.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0o9h8rf0vo1wgi180twld02ms2cy' name='crime_safety_dataset.cleaned.csv' table='[crime_safety_dataset.cleaned#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='integer' name='id' ordinal='0' />
+            <column datatype='date' name='date' ordinal='1' />
+            <column datatype='datetime' name='time' ordinal='2' />
+            <column datatype='string' name='crime_type' ordinal='3' />
+            <column datatype='string' name='city' ordinal='4' />
+            <column datatype='string' name='state' ordinal='5' />
+            <column datatype='string' name='location_description' ordinal='6' />
+            <column datatype='integer' name='victim_age' ordinal='7' />
+            <column datatype='string' name='victim_gender' ordinal='8' />
+            <column datatype='string' name='victim_race' ordinal='9' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[crime_safety_dataset.cleaned.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[id]</local-name>
+            <parent-name>[crime_safety_dataset.cleaned.csv]</parent-name>
+            <remote-alias>id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[crime_safety_dataset.cleaned.csv_43CF36BAEED74F25B6DAF6C94023A571]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[date]</local-name>
+            <parent-name>[crime_safety_dataset.cleaned.csv]</parent-name>
+            <remote-alias>date</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[crime_safety_dataset.cleaned.csv_43CF36BAEED74F25B6DAF6C94023A571]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>time</remote-name>
+            <remote-type>134</remote-type>
+            <local-name>[time]</local-name>
+            <parent-name>[crime_safety_dataset.cleaned.csv]</parent-name>
+            <remote-alias>time</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Hour</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[crime_safety_dataset.cleaned.csv_43CF36BAEED74F25B6DAF6C94023A571]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>crime_type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[crime_type]</local-name>
+            <parent-name>[crime_safety_dataset.cleaned.csv]</parent-name>
+            <remote-alias>crime_type</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[crime_safety_dataset.cleaned.csv_43CF36BAEED74F25B6DAF6C94023A571]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>city</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[city]</local-name>
+            <parent-name>[crime_safety_dataset.cleaned.csv]</parent-name>
+            <remote-alias>city</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[crime_safety_dataset.cleaned.csv_43CF36BAEED74F25B6DAF6C94023A571]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>state</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[state]</local-name>
+            <parent-name>[crime_safety_dataset.cleaned.csv]</parent-name>
+            <remote-alias>state</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[crime_safety_dataset.cleaned.csv_43CF36BAEED74F25B6DAF6C94023A571]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>location_description</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[location_description]</local-name>
+            <parent-name>[crime_safety_dataset.cleaned.csv]</parent-name>
+            <remote-alias>location_description</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[crime_safety_dataset.cleaned.csv_43CF36BAEED74F25B6DAF6C94023A571]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>victim_age</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[victim_age]</local-name>
+            <parent-name>[crime_safety_dataset.cleaned.csv]</parent-name>
+            <remote-alias>victim_age</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[crime_safety_dataset.cleaned.csv_43CF36BAEED74F25B6DAF6C94023A571]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>victim_gender</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[victim_gender]</local-name>
+            <parent-name>[crime_safety_dataset.cleaned.csv]</parent-name>
+            <remote-alias>victim_gender</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[crime_safety_dataset.cleaned.csv_43CF36BAEED74F25B6DAF6C94023A571]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>victim_race</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[victim_race]</local-name>
+            <parent-name>[crime_safety_dataset.cleaned.csv]</parent-name>
+            <remote-alias>victim_race</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[crime_safety_dataset.cleaned.csv_43CF36BAEED74F25B6DAF6C94023A571]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Age Group' datatype='string' name='[Calculation_1004865703877304321]' role='dimension' semantic-role='' type='nominal'>
+        <calculation class='tableau' formula='IF [victim_age] &lt; 18 THEN &quot;Minor&quot;&#13;&#10;ELSEIF [victim_age] &gt;= 18 AND [victim_age] &lt;= 35 THEN &quot;Young Adult&quot;&#13;&#10;ELSEIF [victim_age] &gt; 35 AND [victim_age] &lt;= 60 THEN &quot;Adult&quot;&#13;&#10;ELSE &quot;Senior&quot;&#13;&#10;END' />
+      </column>
+      <column caption='Extracted Time' datatype='string' name='[Calculation_1004865703879950340]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='STR(DATEPART(&apos;hour&apos;, [time])) + &quot;:&quot; +&#13;&#10;RIGHT(&quot;0&quot; + STR(DATEPART(&apos;minute&apos;, [time])), 2) + &quot;:&quot; +&#13;&#10;RIGHT(&quot;0&quot; + STR(DATEPART(&apos;second&apos;, [time])), 2)' />
+      </column>
+      <column caption='Extracted Hour' datatype='integer' name='[Calculation_1004865703880421381]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='DATEPART(&apos;hour&apos;, [time])' />
+      </column>
+      <column caption='Category by Time' datatype='string' name='[Calculation_1004865703880540166]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [Calculation_1004865703880421381] &lt; 6 THEN &quot;Late Night&quot;&#13;&#10;ELSEIF [Calculation_1004865703880421381] &lt; 12 THEN &quot;Morning&quot;&#13;&#10;ELSEIF [Calculation_1004865703880421381] &lt; 18 THEN &quot;Afternoon&quot;&#13;&#10;ELSE &quot;Evening&quot;&#13;&#10;END' />
+      </column>
+      <column caption='Year' datatype='integer' datatype-customized='true' name='[Calculation_1004865703883341832]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='YEAR([date])' />
+      </column>
+      <column caption='MONTH' datatype='integer' name='[Calculation_1004865703883603977]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='MONTH([date])' />
+      </column>
+      <column caption='Count Of Crimes' datatype='integer' name='[Calculation_1004865703886131210]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='Count([crime_type])' />
+      </column>
+      <column caption='crime_safety_dataset.cleaned.csv' datatype='table' name='[__tableau_internal_object_id__].[crime_safety_dataset.cleaned.csv_43CF36BAEED74F25B6DAF6C94023A571]' role='measure' type='quantitative' />
+      <column caption='City' datatype='string' name='[city]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column caption='Crime Type' datatype='string' name='[crime_type]' role='dimension' type='nominal' />
+      <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+      <column caption='Id' datatype='integer' name='[id]' role='dimension' type='ordinal' />
+      <column caption='Location Description' datatype='string' name='[location_description]' role='dimension' semantic-role='[AreaCode].[Name]' type='nominal' />
+      <column caption='State' datatype='string' name='[state]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column caption='Time' datatype='datetime' hidden='true' name='[time]' role='dimension' type='ordinal' />
+      <column caption='Victim Age' datatype='integer' name='[victim_age]' role='measure' type='quantitative' />
+      <column caption='Victim Gender' datatype='string' name='[victim_gender]' role='dimension' type='nominal' />
+      <column caption='Victim Race' datatype='string' name='[victim_race]' role='dimension' type='nominal' />
+      <column-instance column='[date]' derivation='Year' name='[yr:date:ok]' pivot='key' type='ordinal' />
+      <group caption='Action (YEAR(Date))' hidden='true' name='[Action (YEAR(Date))]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[yr:date:ok]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (YEAR(Date),State)' hidden='true' name='[Action (YEAR(Date),State)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[yr:date:ok]' />
+          <groupfilter function='level-members' level='[state]' />
+        </groupfilter>
+      </group>
+      <drill-paths>
+        <drill-path name='state, city'>
+          <field>[state]</field>
+          <field>[city]</field>
+        </drill-path>
+      </drill-paths>
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/My/AppData/Local/Temp/TableauTemp/#TableauTemp_0xci9y50hx54kx1dddjye1ed9u4d.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='07/30/2025 10:46:35 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>id</remote-alias>
+              <ordinal>0</ordinal>
+              <family>crime_safety_dataset.cleaned.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1000</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[crime_safety_dataset.cleaned.csv_43CF36BAEED74F25B6DAF6C94023A571]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>date</remote-alias>
+              <ordinal>1</ordinal>
+              <family>crime_safety_dataset.cleaned.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>772</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[crime_safety_dataset.cleaned.csv_43CF36BAEED74F25B6DAF6C94023A571]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>time</remote-name>
+              <remote-type>134</remote-type>
+              <local-name>[time]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>time</remote-alias>
+              <ordinal>2</ordinal>
+              <family>crime_safety_dataset.cleaned.csv</family>
+              <local-type>datetime</local-type>
+              <aggregation>Hour</aggregation>
+              <approx-count>996</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[crime_safety_dataset.cleaned.csv_43CF36BAEED74F25B6DAF6C94023A571]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>crime_type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[crime_type]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>crime_type</remote-alias>
+              <ordinal>3</ordinal>
+              <family>crime_safety_dataset.cleaned.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[crime_safety_dataset.cleaned.csv_43CF36BAEED74F25B6DAF6C94023A571]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>city</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[city]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>city</remote-alias>
+              <ordinal>4</ordinal>
+              <family>crime_safety_dataset.cleaned.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[crime_safety_dataset.cleaned.csv_43CF36BAEED74F25B6DAF6C94023A571]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>state</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[state]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>state</remote-alias>
+              <ordinal>5</ordinal>
+              <family>crime_safety_dataset.cleaned.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[crime_safety_dataset.cleaned.csv_43CF36BAEED74F25B6DAF6C94023A571]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>location_description</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[location_description]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>location_description</remote-alias>
+              <ordinal>6</ordinal>
+              <family>crime_safety_dataset.cleaned.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>988</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[crime_safety_dataset.cleaned.csv_43CF36BAEED74F25B6DAF6C94023A571]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>victim_age</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[victim_age]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>victim_age</remote-alias>
+              <ordinal>7</ordinal>
+              <family>crime_safety_dataset.cleaned.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>79</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[crime_safety_dataset.cleaned.csv_43CF36BAEED74F25B6DAF6C94023A571]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>victim_gender</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[victim_gender]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>victim_gender</remote-alias>
+              <ordinal>8</ordinal>
+              <family>crime_safety_dataset.cleaned.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[crime_safety_dataset.cleaned.csv_43CF36BAEED74F25B6DAF6C94023A571]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>victim_race</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[victim_race]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>victim_race</remote-alias>
+              <ordinal>9</ordinal>
+              <family>crime_safety_dataset.cleaned.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[crime_safety_dataset.cleaned.csv_43CF36BAEED74F25B6DAF6C94023A571]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[City].[Name]' value='%null%' />
+        <semantic-value key='[Country].[Name]' value='%null%' />
+        <semantic-value key='[State].[Name]' value='%null%' />
+      </semantic-values>
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='id' />
+        <field-sort-custom-order field='date' />
+        <field-sort-custom-order field='Calculation_1004865703883603977' />
+        <field-sort-custom-order field='Calculation_1004865703883341832' />
+        <field-sort-custom-order field='Calculation_1004865703882293255' />
+        <field-sort-custom-order field='Calculation_1004865703876767744' />
+        <field-sort-custom-order field='time' />
+        <field-sort-custom-order field='Calculation_1004865703879950340' />
+        <field-sort-custom-order field='Calculation_1004865703880421381' />
+        <field-sort-custom-order field='Calculation_1004865703880540166' />
+        <field-sort-custom-order field='Calculation_1004865703879118851' />
+        <field-sort-custom-order field='crime_type' />
+        <field-sort-custom-order field='Calculation_1004865703886131210' />
+        <field-sort-custom-order field='city' />
+        <field-sort-custom-order field='state' />
+        <field-sort-custom-order field='location_description' />
+        <field-sort-custom-order field='victim_age' />
+        <field-sort-custom-order field='Calculation_1004865703877304321' />
+        <field-sort-custom-order field='victim_gender' />
+        <field-sort-custom-order field='victim_race' />
+        <field-sort-custom-order field='Geometry (generated)' />
+        <field-sort-custom-order field='Latitude (generated)' />
+        <field-sort-custom-order field='Longitude (generated)' />
+        <field-sort-custom-order field=':Measure Names' />
+        <field-sort-custom-order field='Multiple Values' />
+      </field-sort-info>
+      <object-graph>
+        <objects>
+          <object caption='crime_safety_dataset.cleaned.csv' id='crime_safety_dataset.cleaned.csv_43CF36BAEED74F25B6DAF6C94023A571'>
+            <properties context=''>
+              <relation connection='textscan.0o9h8rf0vo1wgi180twld02ms2cy' name='crime_safety_dataset.cleaned.csv' table='[crime_safety_dataset.cleaned#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='integer' name='id' ordinal='0' />
+                  <column datatype='date' name='date' ordinal='1' />
+                  <column datatype='datetime' name='time' ordinal='2' />
+                  <column datatype='string' name='crime_type' ordinal='3' />
+                  <column datatype='string' name='city' ordinal='4' />
+                  <column datatype='string' name='state' ordinal='5' />
+                  <column datatype='string' name='location_description' ordinal='6' />
+                  <column datatype='integer' name='victim_age' ordinal='7' />
+                  <column datatype='string' name='victim_gender' ordinal='8' />
+                  <column datatype='string' name='victim_race' ordinal='9' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <actions>
+    <action caption='Filter 1 (generated)' name='[Action1_3CC24CE4AC494E748ACD0A2D597BEFEC]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet=' Crimes By State' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+    <action caption='Filter 2 (generated)' name='[Action2_1A30BED590DD4098A510A0ED80279C6A]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='Crimes by Year' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name=' Crimes By State'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontcolor='#4e79a7'>Total Crimes By State</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='crime_safety_dataset.cleaned' name='federated.1d6dorr0jyvyda19ruwe50y01n8d' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1d6dorr0jyvyda19ruwe50y01n8d'>
+            <column caption='Count Of Crimes' datatype='integer' name='[Calculation_1004865703886131210]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='Count([crime_type])' />
+            </column>
+            <column caption='Crime Type' datatype='string' name='[crime_type]' role='dimension' type='nominal' />
+            <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+            <column-instance column='[state]' derivation='None' name='[none:state:nk]' pivot='key' type='nominal' />
+            <column caption='State' datatype='string' name='[state]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[Calculation_1004865703886131210]' derivation='User' name='[usr:Calculation_1004865703886131210:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[date]' derivation='Year' name='[yr:date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1d6dorr0jyvyda19ruwe50y01n8d].[Action (YEAR(Date))]'>
+            <groupfilter function='member' level='[yr:date:ok]' member='2021' user:ui-action-filter='[Action2_1A30BED590DD4098A510A0ED80279C6A]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1d6dorr0jyvyda19ruwe50y01n8d].[none:state:nk]'>
+            <groupfilter function='union' user:ui-domain='cascading' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:state:nk]' member='&quot;AZ&quot;' />
+              <groupfilter function='member' level='[none:state:nk]' member='&quot;CA&quot;' />
+              <groupfilter function='member' level='[none:state:nk]' member='&quot;IL&quot;' />
+              <groupfilter function='member' level='[none:state:nk]' member='&quot;NY&quot;' />
+              <groupfilter function='member' level='[none:state:nk]' member='&quot;PA&quot;' />
+              <groupfilter function='member' level='[none:state:nk]' member='&quot;TX&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1d6dorr0jyvyda19ruwe50y01n8d].[none:state:nk]</column>
+            <column>[federated.1d6dorr0jyvyda19ruwe50y01n8d].[Action (YEAR(Date))]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+          </pane>
+        </panes>
+        <rows>[federated.1d6dorr0jyvyda19ruwe50y01n8d].[usr:Calculation_1004865703886131210:qk]</rows>
+        <cols>[federated.1d6dorr0jyvyda19ruwe50y01n8d].[none:state:nk]</cols>
+        <pages>
+          <column>[federated.1d6dorr0jyvyda19ruwe50y01n8d].[yr:date:ok]</column>
+        </pages>
+      </table>
+      <simple-id uuid='{E234F60C-5315-4CF4-A017-563DAFD08286}' />
+    </worksheet>
+    <worksheet name='Crime Against Age Groups'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontcolor='#4e79a7'>Crime Against Age Groups</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='crime_safety_dataset.cleaned' name='federated.1d6dorr0jyvyda19ruwe50y01n8d' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.1d6dorr0jyvyda19ruwe50y01n8d'>
+            <column caption='Age Group' datatype='string' name='[Calculation_1004865703877304321]' role='dimension' semantic-role='' type='nominal'>
+              <calculation class='tableau' formula='IF [victim_age] &lt; 18 THEN &quot;Minor&quot;&#13;&#10;ELSEIF [victim_age] &gt;= 18 AND [victim_age] &lt;= 35 THEN &quot;Young Adult&quot;&#13;&#10;ELSEIF [victim_age] &gt; 35 AND [victim_age] &lt;= 60 THEN &quot;Adult&quot;&#13;&#10;ELSE &quot;Senior&quot;&#13;&#10;END' />
+            </column>
+            <column caption='Count Of Crimes' datatype='integer' name='[Calculation_1004865703886131210]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='Count([crime_type])' />
+            </column>
+            <column caption='City' datatype='string' name='[city]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+            <column caption='Crime Type' datatype='string' name='[crime_type]' role='dimension' type='nominal' />
+            <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_1004865703877304321]' derivation='None' name='[none:Calculation_1004865703877304321:nk]' pivot='key' type='nominal' />
+            <column-instance column='[city]' derivation='None' name='[none:city:nk]' pivot='key' type='nominal' />
+            <column-instance column='[state]' derivation='None' name='[none:state:nk]' pivot='key' type='nominal' />
+            <column caption='State' datatype='string' name='[state]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[Calculation_1004865703886131210]' derivation='User' name='[usr:Calculation_1004865703886131210:qk]' pivot='key' type='quantitative' />
+            <column caption='Victim Age' datatype='integer' name='[victim_age]' role='measure' type='quantitative' />
+            <column-instance column='[date]' derivation='Year' name='[yr:date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1d6dorr0jyvyda19ruwe50y01n8d].[Action (YEAR(Date))]'>
+            <groupfilter function='member' level='[yr:date:ok]' member='2021' user:ui-action-filter='[Action2_1A30BED590DD4098A510A0ED80279C6A]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1d6dorr0jyvyda19ruwe50y01n8d].[Action (YEAR(Date),State)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_3CC24CE4AC494E748ACD0A2D597BEFEC]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[yr:date:ok]' />
+              <groupfilter function='level-members' level='[state]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1d6dorr0jyvyda19ruwe50y01n8d].[none:state:nk]'>
+            <groupfilter function='level-members' level='[none:state:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1d6dorr0jyvyda19ruwe50y01n8d].[none:state:nk]</column>
+            <column>[federated.1d6dorr0jyvyda19ruwe50y01n8d].[Action (YEAR(Date),State)]</column>
+            <column>[federated.1d6dorr0jyvyda19ruwe50y01n8d].[Action (YEAR(Date))]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1d6dorr0jyvyda19ruwe50y01n8d].[usr:Calculation_1004865703886131210:qk]' palette='red_10_0' type='interpolated' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='omit-on-special' field='[federated.1d6dorr0jyvyda19ruwe50y01n8d].[none:city:nk]' value='false' />
+            <format attr='break-on-special' field='[federated.1d6dorr0jyvyda19ruwe50y01n8d].[none:city:nk]' value='false' />
+            <format attr='show-null-value-warning' field='[federated.1d6dorr0jyvyda19ruwe50y01n8d].[none:city:nk]' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='on' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <size column='[federated.1d6dorr0jyvyda19ruwe50y01n8d].[usr:Calculation_1004865703886131210:qk]' />
+              <color column='[federated.1d6dorr0jyvyda19ruwe50y01n8d].[usr:Calculation_1004865703886131210:qk]' />
+              <text column='[federated.1d6dorr0jyvyda19ruwe50y01n8d].[none:Calculation_1004865703877304321:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{7C1C1B55-177C-428E-A767-05831A7D7EE9}' />
+    </worksheet>
+    <worksheet name='Crimes by Year'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontcolor='#4e79a7'>Total Crimes by Year</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='crime_safety_dataset.cleaned' name='federated.1d6dorr0jyvyda19ruwe50y01n8d' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1d6dorr0jyvyda19ruwe50y01n8d'>
+            <column caption='Count Of Crimes' datatype='integer' name='[Calculation_1004865703886131210]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='Count([crime_type])' />
+            </column>
+            <column caption='Crime Type' datatype='string' name='[crime_type]' role='dimension' type='nominal' />
+            <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+            <column caption='State' datatype='string' name='[state]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[Calculation_1004865703886131210]' derivation='User' name='[usr:Calculation_1004865703886131210:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[date]' derivation='Year' name='[yr:date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1d6dorr0jyvyda19ruwe50y01n8d].[Action (YEAR(Date),State)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_3CC24CE4AC494E748ACD0A2D597BEFEC]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[yr:date:ok]' />
+              <groupfilter function='level-members' level='[state]' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1d6dorr0jyvyda19ruwe50y01n8d].[Action (YEAR(Date),State)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.1d6dorr0jyvyda19ruwe50y01n8d].[usr:Calculation_1004865703886131210:qk]</rows>
+        <cols>[federated.1d6dorr0jyvyda19ruwe50y01n8d].[yr:date:ok]</cols>
+      </table>
+      <simple-id uuid='{F1C0C8E7-671E-4129-BCA6-621699EADE3C}' />
+    </worksheet>
+    <worksheet name='Sheet 5'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#1b1b1b' fontsize='20'>Total Crimes</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='crime_safety_dataset.cleaned' name='federated.1d6dorr0jyvyda19ruwe50y01n8d' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1d6dorr0jyvyda19ruwe50y01n8d'>
+            <column caption='Count Of Crimes' datatype='integer' name='[Calculation_1004865703886131210]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='Count([crime_type])' />
+            </column>
+            <column caption='Crime Type' datatype='string' name='[crime_type]' role='dimension' type='nominal' />
+            <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+            <column caption='State' datatype='string' name='[state]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[Calculation_1004865703886131210]' derivation='User' name='[usr:Calculation_1004865703886131210:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[date]' derivation='Year' name='[yr:date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1d6dorr0jyvyda19ruwe50y01n8d].[Action (YEAR(Date))]'>
+            <groupfilter function='member' level='[yr:date:ok]' member='2021' user:ui-action-filter='[Action2_1A30BED590DD4098A510A0ED80279C6A]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1d6dorr0jyvyda19ruwe50y01n8d].[Action (YEAR(Date),State)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_3CC24CE4AC494E748ACD0A2D597BEFEC]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[yr:date:ok]' />
+              <groupfilter function='level-members' level='[state]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1d6dorr0jyvyda19ruwe50y01n8d].[yr:date:ok]'>
+            <groupfilter function='level-members' level='[yr:date:ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1d6dorr0jyvyda19ruwe50y01n8d].[yr:date:ok]</column>
+            <column>[federated.1d6dorr0jyvyda19ruwe50y01n8d].[Action (YEAR(Date))]</column>
+            <column>[federated.1d6dorr0jyvyda19ruwe50y01n8d].[Action (YEAR(Date),State)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='font-size' value='22' />
+            <format attr='font-weight' value='bold' />
+            <format attr='color' value='#606b76' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1d6dorr0jyvyda19ruwe50y01n8d].[usr:Calculation_1004865703886131210:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{A5836A1F-FB86-48FC-9EB5-C73FF19D034F}' />
+    </worksheet>
+    <worksheet name='Sheet 6'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontsize='18'>Victims Affected</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='crime_safety_dataset.cleaned' name='federated.1d6dorr0jyvyda19ruwe50y01n8d' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1d6dorr0jyvyda19ruwe50y01n8d'>
+            <column caption='Age Group' datatype='string' name='[Calculation_1004865703877304321]' role='dimension' semantic-role='' type='nominal'>
+              <calculation class='tableau' formula='IF [victim_age] &lt; 18 THEN &quot;Minor&quot;&#13;&#10;ELSEIF [victim_age] &gt;= 18 AND [victim_age] &lt;= 35 THEN &quot;Young Adult&quot;&#13;&#10;ELSEIF [victim_age] &gt; 35 AND [victim_age] &lt;= 60 THEN &quot;Adult&quot;&#13;&#10;ELSE &quot;Senior&quot;&#13;&#10;END' />
+            </column>
+            <column caption='Count Of Crimes' datatype='integer' name='[Calculation_1004865703886131210]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='Count([crime_type])' />
+            </column>
+            <column caption='Crime Type' datatype='string' name='[crime_type]' role='dimension' type='nominal' />
+            <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_1004865703877304321]' derivation='None' name='[none:Calculation_1004865703877304321:nk]' pivot='key' type='nominal' />
+            <column caption='State' datatype='string' name='[state]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[date]' derivation='Year-Trunc' name='[tyr:date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_1004865703886131210]' derivation='User' name='[usr:Calculation_1004865703886131210:qk]' pivot='key' type='quantitative' />
+            <column caption='Victim Age' datatype='integer' name='[victim_age]' role='measure' type='quantitative' />
+            <column-instance column='[date]' derivation='Year' name='[yr:date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1d6dorr0jyvyda19ruwe50y01n8d].[Action (YEAR(Date))]'>
+            <groupfilter function='level-members' level='[yr:date:ok]' user:ui-action-filter='[Action2_1A30BED590DD4098A510A0ED80279C6A]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1d6dorr0jyvyda19ruwe50y01n8d].[Action (YEAR(Date),State)]'>
+            <groupfilter function='reorder-dimensionality' user:ui-action-filter='[Action1_3CC24CE4AC494E748ACD0A2D597BEFEC]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='crossjoin'>
+                <groupfilter function='member' level='[state]' member='&quot;PA&quot;' />
+                <groupfilter function='member' level='[yr:date:ok]' member='2022' />
+              </groupfilter>
+              <order>
+                <hierarchy name='[yr:date:ok]' />
+                <hierarchy name='[state]' />
+              </order>
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1d6dorr0jyvyda19ruwe50y01n8d].[Action (YEAR(Date),State)]</column>
+            <column>[federated.1d6dorr0jyvyda19ruwe50y01n8d].[Action (YEAR(Date))]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='font-size' value='16' />
+            <format attr='color' value='#4e79a7' />
+            <format attr='font-weight' value='bold' />
+            <format attr='text-align' data-class='subtotal' scope='cols' value='center' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Square' />
+            <encodings>
+              <color column='[federated.1d6dorr0jyvyda19ruwe50y01n8d].[usr:Calculation_1004865703886131210:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='has-stroke' value='false' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1d6dorr0jyvyda19ruwe50y01n8d].[none:Calculation_1004865703877304321:nk]</rows>
+        <cols>[federated.1d6dorr0jyvyda19ruwe50y01n8d].[tyr:date:ok]</cols>
+      </table>
+      <simple-id uuid='{5193F639-C902-4FF1-AEA9-F966302A6039}' />
+    </worksheet>
+    <worksheet name='State-wise Crime Data'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='crime_safety_dataset.cleaned' name='federated.1d6dorr0jyvyda19ruwe50y01n8d' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1d6dorr0jyvyda19ruwe50y01n8d'>
+            <column caption='Count Of Crimes' datatype='integer' name='[Calculation_1004865703886131210]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='Count([crime_type])' />
+            </column>
+            <column caption='Crime Type' datatype='string' name='[crime_type]' role='dimension' type='nominal' />
+            <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+            <column-instance column='[crime_type]' derivation='None' name='[none:crime_type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[state]' derivation='None' name='[none:state:nk]' pivot='key' type='nominal' />
+            <column caption='State' datatype='string' name='[state]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[Calculation_1004865703886131210]' derivation='User' name='[usr:Calculation_1004865703886131210:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[date]' derivation='Year' name='[yr:date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1d6dorr0jyvyda19ruwe50y01n8d].[Action (YEAR(Date))]'>
+            <groupfilter function='member' level='[yr:date:ok]' member='2021' user:ui-action-filter='[Action2_1A30BED590DD4098A510A0ED80279C6A]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1d6dorr0jyvyda19ruwe50y01n8d].[Action (YEAR(Date),State)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_93E28DE7BB364CC381097DF4A1C389D6]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[yr:date:ok]' />
+              <groupfilter function='level-members' level='[state]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1d6dorr0jyvyda19ruwe50y01n8d].[none:state:nk]'>
+            <groupfilter function='level-members' level='[none:state:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1d6dorr0jyvyda19ruwe50y01n8d].[yr:date:ok]'>
+            <groupfilter function='level-members' level='[yr:date:ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1d6dorr0jyvyda19ruwe50y01n8d].[none:state:nk]</column>
+            <column>[federated.1d6dorr0jyvyda19ruwe50y01n8d].[yr:date:ok]</column>
+            <column>[federated.1d6dorr0jyvyda19ruwe50y01n8d].[Action (YEAR(Date),State)]</column>
+            <column>[federated.1d6dorr0jyvyda19ruwe50y01n8d].[Action (YEAR(Date))]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.1d6dorr0jyvyda19ruwe50y01n8d].[none:crime_type:nk]' value='120' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1d6dorr0jyvyda19ruwe50y01n8d].[usr:Calculation_1004865703886131210:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1d6dorr0jyvyda19ruwe50y01n8d].[none:state:nk]</rows>
+        <cols>[federated.1d6dorr0jyvyda19ruwe50y01n8d].[none:crime_type:nk]</cols>
+        <pages>
+          <column>[federated.1d6dorr0jyvyda19ruwe50y01n8d].[yr:date:ok]</column>
+        </pages>
+      </table>
+      <simple-id uuid='{1F30997F-8A80-475E-B138-9C316F855FAA}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <style />
+      <size sizing-mode='automatic' />
+      <zones>
+        <zone h='100000' id='11' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98074' id='14' param='horz' type-v2='layout-flow' w='99062' x='469' y='963'>
+            <zone h='98074' id='12' type-v2='layout-basic' w='99062' x='469' y='963' />
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='46691' id='3' name=' Crimes By State' w='38430' x='234' y='1685' />
+        <zone count='1' h='5897' id='4' name=' Crimes By State' name1='State-wise Crime Data' synchronized='1' type-v2='currpage' w='8084' x='33450' y='602' />
+        <zone h='53911' id='5' name='Crime Against Age Groups' w='36321' x='59637' y='1444' />
+        <zone h='6619' id='7' name='Crime Against Age Groups' pane-specification-id='0' param='[federated.1d6dorr0jyvyda19ruwe50y01n8d].[usr:Calculation_1004865703886131210:qk]' type-v2='color' w='8787' x='79965' y='1324' />
+        <zone h='14561' id='9' name='Sheet 5' w='13298' x='44112' y='29001' />
+        <zone h='43081' id='10' name='Crimes by Year' w='46514' x='52021' y='56679' />
+        <zone h='44645' id='15' name='State-wise Crime Data' w='49209' x='351' y='54874' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1450' minheight='1450' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='19' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98074' id='18' param='vert' type-v2='layout-flow' w='99062' x='469' y='963'>
+                <zone fixed-size='280' h='53911' id='5' is-fixed='true' name='Crime Against Age Groups' w='36321' x='59637' y='1444'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='6619' id='7' name='Crime Against Age Groups' pane-specification-id='0' param='[federated.1d6dorr0jyvyda19ruwe50y01n8d].[usr:Calculation_1004865703886131210:qk]' type-v2='color' w='8787' x='79965' y='1324'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='46691' id='3' is-fixed='true' name=' Crimes By State' w='38430' x='234' y='1685'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='116' h='14561' id='9' is-fixed='true' name='Sheet 5' w='13298' x='44112' y='29001'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='44645' id='15' is-fixed='true' name='State-wise Crime Data' w='49209' x='351' y='54874'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='43081' id='10' is-fixed='true' name='Crimes by Year' w='46514' x='52021' y='56679'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone count='1' h='5897' id='4' name=' Crimes By State' name1='State-wise Crime Data' synchronized='1' type-v2='currpage' w='8084' x='33450' y='602'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{5F42D1F7-716F-4F31-9051-7478BE6B7B50}' />
+    </dashboard>
+  </dashboards>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='worksheet' name=' Crimes By State'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card type='currpage' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <current-page>
+          <multibucket>
+            <bucket>2020</bucket>
+          </multibucket>
+        </current-page>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1d6dorr0jyvyda19ruwe50y01n8d].[none:city:nk]</field>
+            <field>[federated.1d6dorr0jyvyda19ruwe50y01n8d].[none:state:nk]</field>
+            <field>[federated.1d6dorr0jyvyda19ruwe50y01n8d].[none:victim_gender:nk]</field>
+            <field>[federated.1d6dorr0jyvyda19ruwe50y01n8d].[yr:date:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{FAABDE29-8FF1-41C4-A804-34E7720CCA00}' />
+    </window>
+    <window class='worksheet' name='Crimes by Year'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1d6dorr0jyvyda19ruwe50y01n8d].[yr:date:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{9CA8BA69-3D75-467B-96E0-DE0CBAFDAFF8}' />
+    </window>
+    <window class='worksheet' name='State-wise Crime Data'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1d6dorr0jyvyda19ruwe50y01n8d].[none:state:nk]' type='filter' values='cascading' />
+            <card type='currpage' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <current-page>
+          <multibucket>
+            <bucket>2020</bucket>
+          </multibucket>
+        </current-page>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1d6dorr0jyvyda19ruwe50y01n8d].[none:crime_type:nk]</field>
+            <field>[federated.1d6dorr0jyvyda19ruwe50y01n8d].[none:state:nk]</field>
+            <field>[federated.1d6dorr0jyvyda19ruwe50y01n8d].[yr:date:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{AC5870FB-70AB-4011-9932-5C65FA85D966}' />
+    </window>
+    <window class='worksheet' name='Crime Against Age Groups'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1d6dorr0jyvyda19ruwe50y01n8d].[none:state:nk]' type='filter' values='cascading' />
+            <card pane-specification-id='0' param='[federated.1d6dorr0jyvyda19ruwe50y01n8d].[usr:Calculation_1004865703886131210:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1d6dorr0jyvyda19ruwe50y01n8d].[none:Calculation_1004865703877304321:nk]</field>
+            <field>[federated.1d6dorr0jyvyda19ruwe50y01n8d].[none:city:nk]</field>
+            <field>[federated.1d6dorr0jyvyda19ruwe50y01n8d].[none:crime_type:nk]</field>
+            <field>[federated.1d6dorr0jyvyda19ruwe50y01n8d].[none:state:nk]</field>
+          </color-one-way>
+        </highlight>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{B54E4C6B-EBAB-4D23-A7E7-8B11C6EA59F8}' />
+    </window>
+    <window class='worksheet' name='Sheet 5'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1d6dorr0jyvyda19ruwe50y01n8d].[yr:date:ok]' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1d6dorr0jyvyda19ruwe50y01n8d].[none:crime_type:nk]</field>
+            <field>[federated.1d6dorr0jyvyda19ruwe50y01n8d].[yr:date:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{1518C72B-7D21-4100-8E33-79C5C1602E5A}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name=' Crimes By State'>
+          <current-page>
+            <multibucket>
+              <bucket>2020</bucket>
+            </multibucket>
+          </current-page>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Crime Against Age Groups'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Crimes by Year'>
+          <zoom type='entire-view' />
+          <selection-collection>
+            <tuple-selection>
+              <tuple-reference>
+                <tuple-descriptor>
+                  <pane-descriptor>
+                    <x-fields>
+                      <field>[federated.1d6dorr0jyvyda19ruwe50y01n8d].[yr:date:ok]</field>
+                    </x-fields>
+                    <y-fields>
+                      <field>[federated.1d6dorr0jyvyda19ruwe50y01n8d].[usr:Calculation_1004865703886131210:qk]</field>
+                    </y-fields>
+                  </pane-descriptor>
+                  <columns>
+                    <field>[federated.1d6dorr0jyvyda19ruwe50y01n8d].[usr:Calculation_1004865703886131210:qk]</field>
+                    <field>[federated.1d6dorr0jyvyda19ruwe50y01n8d].[yr:date:ok]</field>
+                  </columns>
+                </tuple-descriptor>
+                <tuple>
+                  <value>187</value>
+                  <value>2021</value>
+                </tuple>
+              </tuple-reference>
+            </tuple-selection>
+          </selection-collection>
+        </viewpoint>
+        <viewpoint name='Sheet 5'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='State-wise Crime Data'>
+          <current-page>
+            <multibucket>
+              <bucket>2020</bucket>
+            </multibucket>
+          </current-page>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='12' />
+      <simple-id uuid='{EAA6289E-BE5B-4550-9C84-E25D135FC34C}' />
+    </window>
+    <window class='worksheet' name='Sheet 6'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1d6dorr0jyvyda19ruwe50y01n8d].[usr:Calculation_1004865703886131210:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1d6dorr0jyvyda19ruwe50y01n8d].[avg:Calculation_1004865703880421381:qk]</field>
+            <field>[federated.1d6dorr0jyvyda19ruwe50y01n8d].[avg:victim_age:qk]</field>
+            <field>[federated.1d6dorr0jyvyda19ruwe50y01n8d].[none:Calculation_1004865703880540166:nk]</field>
+            <field>[federated.1d6dorr0jyvyda19ruwe50y01n8d].[none:crime_type:nk]</field>
+            <field>[federated.1d6dorr0jyvyda19ruwe50y01n8d].[none:victim_gender:nk]</field>
+            <field>[federated.1d6dorr0jyvyda19ruwe50y01n8d].[yr:date:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{3A8CD6D9-D349-49AA-986C-B9CFC2538451}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name=' Crimes By State' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Crime Against Age Groups' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAABJ0AAASdAHeZh94
+      AAAETklEQVR4nO3ZTWtcZRyG8fvMnJlMJtjGTNomNcXWIlVEQRGDe1eCO8EP4efw6+i+iOBC
+      +rII1GJ1oTQGS8Em5L15mTlzXFSaFKar6gzhun6reZ7hwH/xXJwzZ4q6rutIUI1JDyBNkgEI
+      rTy92F99lI279yc1izR2LwSwfvteVr7+ZlKzSGPnI5DQDEBoIwNozi3kylefZX75nTS63XSX
+      5lO0pzJ9ZTFlt5WZt5ZSdKYz8+alpNlKu3c+zanmuGeXXlk5arPa207/oErRLLL45eeZWZzN
+      xp17aR5uJm9fTtpTmblxLUd/72b22vXMLQzz57d3xz279MpG3gEaZSvHT9bTXlxMtbWVJz/c
+      yuHmQfb/WMvgeJgkqYdFWrPd1IMqWysPUv27L50lI+8Aw6e72Xmwmq2VX1NXRcqZdvp7h8mw
+      ytPNn5OiSD1MWjPt9HcPUxT+mayzaWQASZ3B9u7zVX+7f/LNoDrZ3xk82/P864zyLZDQDEBo
+      BiA0AxCaAQjNAIRmAEIzAKEZgNAMQGgGIDQDEJoBCM0AhGYAQjMAoRmA0AxAaAYgNAMQmgEI
+      zQCEZgBCMwChGYDQDEBoBiA0AxCaAQjNAIRmAEIzAKEZgNAMQGgGIDQDEJoBCM0AhGYAQjMA
+      oRmA0AxAaAYgNAMQmgEIzQCEZgBCMwChGYDQDEBoBiA0AxCaAQjNAIRmAEIzAKEZgNAMQGgG
+      IDQDEJoBCM0AhGYAQjMAoRmA0AxAaAYgNAMQmgEIzQCEZgBCMwChGYDQDEBoBiA0AxCaAQjN
+      AIRmAEIzAKEZgNAMQGgGIDQDEJoBCM0AhGYAQjMAoRmA0AxAaAYgNAMQmgEIzQCEZgBCMwCh
+      GYDQDEBoBiC08vSiUZZpdqcnNYs0di8EML80m+Uv3pvULNLYvRDAcHMrx/d/mdQs0tj5G0Bo
+      Lw2gcfGNNHuvnax7c88/F7MXUkw1UrTLUZdKZ8ZLT3Dr6uVkeCHVwcN0Pnw3RVGn/9ej1P0i
+      xdylNOpept6/nr3vbqY+7I9zZuk/MzqAVjetq0tJPUw9bOTo1u20Pvgo5cLFVEfPbhrDx+vp
+      /9b38OtMGxlAce58Dr6/mbr9ehrTZTqfLqfa3kxd91LOd3L8+1qyt5Ocu5Gis2YEOrNGBlBv
+      PE6VJNnPMMng4erIi6sff/q/5pLGwrdAQjMAoRmA0AxAaAYgNAMQmgEIzQCEZgBCMwChGYDQ
+      DEBoBiA0AxCaAQjNAIRmAEIzAKEZgNAMQGgGIDQDEJoBCM0AhGYAQjMAoRmA0AxAaAYgNAMQ
+      mgEIzQCEZgBCMwChGYDQDEBoBiA0AxCaAQjNAIRmAEIzAKEZgNAMQGgGIDQDEJoBCM0AhGYA
+      QjMAoRmA0AxAaAYgNAMQmgEIzQCEZgBCMwChGYDQDEBoBiA0AxCaAQjNAIRmAEIzAKEZgNAM
+      QGgGIDQDEJoBCK08vWjO99L55ONJzSKN3T+Dmq5XJEiVqwAAAABJRU5ErkJggg==
+    </thumbnail>
+    <thumbnail height='192' name='Crimes by Year' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Dashboard 1' width='192'>
+      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
+      XtccPKg5AAAAAElFTkSuQmCC
+    </thumbnail>
+    <thumbnail height='55' name='Sheet 5' width='124'>
+      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
+      jP8BnGss26/tCecAAAAASUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='124' name='Sheet 6' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='190' name='State-wise Crime Data' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
