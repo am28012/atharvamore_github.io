@@ -1,0 +1,25 @@
+# Website identity
+title: "Atharva More | Data Analyst Portfolio"
+description: "Projects, dashboards, and case studies by Atharva More – Data & BI Analyst"
+url: "https://atharvamore_github.io"
+baseurl: "" # leave blank for user.github.io sites
+
+# Theme config
+theme: jekyll-theme-minimal
+
+author:
+  name: Atharva More
+  email: atharva.more34@gmail.com
+
+# Social media & links
+github_username: am28012
+linkedin_username: atharva-more-b55735370
+tableau_profile: https://public.tableau.com/app/profile/atharva.more2101/vizzes
+
+# Optional settings
+show_downloads: false
+logo: /assets/img/headshot.png
+
+# Markdown engine
+markdown: kramdown
+
